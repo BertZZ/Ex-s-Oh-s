@@ -2,9 +2,27 @@
   "RSpec": {
     "coverage": {
       "/Users/bertz/Projects/Xs_and_Os/spec/square_spec.rb": [
-
+        1,
+        null,
+        1,
+        3,
+        2,
+        null,
+        1,
+        1,
+        null,
+        null
+      ],
+      "/Users/bertz/Projects/Xs_and_Os/lib/square.rb": [
+        1,
+        1,
+        null,
+        1,
+        2,
+        null,
+        null
       ]
     },
-    "timestamp": 1497359238
+    "timestamp": 1497359709
   }
 }
