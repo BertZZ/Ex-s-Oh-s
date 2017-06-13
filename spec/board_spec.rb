@@ -11,4 +11,7 @@ describe Board do
       [' ', ' ', ' ']
       ])
   end
+  it 'Can be accessed one square at a time' do
+    expect(subject.board[0][0]).to eq(' ')
+  end
 end
