@@ -5,6 +5,6 @@ describe Square do
   it { is_expected.to be_a Square }
 
   it 'Is initialised with an empty value' do
-    expect(subject.value).to eq(" ")
+    expect(subject.value).to eq(' ')
   end
 end
