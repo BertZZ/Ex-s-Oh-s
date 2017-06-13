@@ -1,4 +1,4 @@
-class Square
+class Square # It makes squares for the Game Board
   attr_accessor :value
 
   def initialize(value = ' ')
