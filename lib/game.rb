@@ -10,13 +10,15 @@ class Game #It runs the game
     @otherPlayer = @players[1]
     @board = Board.new
     @printer = BoardPrinter.new
+
   end
 
   def printBoard
     @printer.print(@board)
   end
 
-  
-
-
+  # def claimSquare(number)
+  #   turn = Turn.new(number, @currentPlayer)
+  #   turn.takeTurn This should play through the whole turn 
+  # end
 end
