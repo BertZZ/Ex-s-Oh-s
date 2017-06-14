@@ -1,4 +1,5 @@
 require 'board_printer'
+require 'board'
 
 describe BoardPrinter do
   subject(:board) { described_class.new }
@@ -7,7 +8,7 @@ describe BoardPrinter do
   describe '#print' do
     it 'Prints the game board to the console' do
       board = Board.new
-      expect { subject.print(board.board) }.to output().to_stdout
+      expect { subject.print(board) }.to output().to_stdout
  end
 end
 
