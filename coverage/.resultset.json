@@ -64,6 +64,47 @@
         null,
         null
       ],
+      "/Users/bertz/Projects/Xs_and_Os/spec/game_spec.rb": [
+        1,
+        null,
+        1,
+        4,
+        2,
+        null,
+        1,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null
+      ],
+      "/Users/bertz/Projects/Xs_and_Os/lib/game.rb": [
+        1,
+        1,
+        1,
+        null,
+        1,
+        3,
+        3,
+        null,
+        null
+      ],
+      "/Users/bertz/Projects/Xs_and_Os/lib/player.rb": [
+        1,
+        1,
+        null,
+        1,
+        9,
+        9,
+        null,
+        null
+      ],
       "/Users/bertz/Projects/Xs_and_Os/spec/player_spec.rb": [
         1,
         null,
@@ -78,16 +119,6 @@
         1,
         1,
         null,
-        null,
-        null
-      ],
-      "/Users/bertz/Projects/Xs_and_Os/lib/player.rb": [
-        1,
-        1,
-        null,
-        1,
-        3,
-        3,
         null,
         null
       ],
@@ -113,6 +144,6 @@
         null
       ]
     },
-    "timestamp": 1497436902
+    "timestamp": 1497438362
   }
 }
