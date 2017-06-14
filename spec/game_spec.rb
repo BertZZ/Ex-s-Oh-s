@@ -15,4 +15,12 @@ describe Game do
     expect(game.player2.name).to eq("Adam")
     expect(game.player2.marker).to eq("O")
   end
+
+  it 'Picks a player to go first' do
+    expect(game.currentPlayer).to be_a Player
+  end
+
+  it 'Creates a board' do
+    expect(game.board).to be_a Board
+  end
 end

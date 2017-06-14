@@ -8,7 +8,7 @@ describe BoardPrinter do
   describe '#print' do
     it 'Prints the game board to the console' do
       board = Board.new
-      expect { subject.print(board) }.to output().to_stdout
+      expect { subject.print(board) }.to output(board).to_stdout
  end
 end
 
