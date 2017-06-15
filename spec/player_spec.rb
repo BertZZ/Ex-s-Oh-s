@@ -11,5 +11,4 @@ describe Player do
   it 'Is initialised with the players marker' do
     expect(subject.marker).to eq('X')
   end
-
 end
