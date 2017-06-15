@@ -31,4 +31,14 @@ describe Game do
       expect(game.other_player).to eq(player)
     end
   end
+
+  describe '#claimSquare' do
+    it 'Claims a square on the board' do
+      game.claimSquare(6)
+      expect(game.board.board[5]).not_to eq(' ')
+    end
+    it 'Throws an error if a number higher than 9 is entered' do
+      expect{ game.claimSquare(34) }.to raise_error('Please enter a valid square number')
+    end
+  end
 end

@@ -1,48 +1,21 @@
 class Turn
   attr_reader :square_number, :marker
-  attr_accessor :value1, :value2
 
-  def initialize(number, current_player)
-    @square_number = number
-    @value1 = 0
-    @value2 = 0
+  def initialize(number, current_player, board)
+    @square_number = number - 1
     @marker = current_player.marker
+    @board = board
   end
 
-  def numberConverter
-    if @square_number == 1
-      @value1 = 0
-      @value2 = 0
-    elsif @square_number == 2
-      @value1 = 0
-      @value2 = 1
-    elsif @square_number == 3
-      @value1 = 0
-      @value2 = 2
-    elsif @square_number == 4
-      @value1 = 1
-      @value2 = 0
-    elsif @square_number == 5
-      @value1 = 1
-      @value2 = 1
-    elsif @square_number == 6
-      @value1 = 1
-      @value2 = 2
-    elsif @square_number == 7
-      @value1 = 2
-      @value2 = 0
-    elsif @square_number == 8
-      @value1 = 2
-      @value2 = 1
-    elsif @square_number == 9
-      @value1 = 2
-      @value2 = 2
+  def changeValue
+    if @board.board[@square_number] == ' '
+      @board.board[@square_number] = @marker
     else
-      puts 'Please pick a number between 1 and 9'
+      raise 'This square is already claimed'
     end
   end
 
-  def changeValue(board)
-    board.board[@value1][@value2] = @marker
+  def takeTurn
+    changeValue
   end
 end

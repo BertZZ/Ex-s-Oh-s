@@ -2,35 +2,36 @@ require 'turn'
 
 describe Turn do
   let(:player) { double name: 'Bertie', marker: 'X' }
-  subject(:turn) { described_class.new(5, player) }
+  before (:each) do
+    @board = Board.new
+  end
+  subject(:turn) { described_class.new(5, player, @board) }
   it { is_expected.to be_a Turn }
 
   it 'is initalized with a number between 1-9' do
-    expect(subject.square_number).to eq(5)
-  end
-
-  it 'has empty spaces for values to be added into' do
-    expect(subject.value1).to eq(0)
-    expect(subject.value2).to eq(0)
+    expect(subject.square_number).to eq(4)
   end
 
   it 'knows the current Players mark' do
     expect(subject.marker).to eq('X')
   end
 
-  describe '#numberConverter' do
-    it 'Converts a number into the array reference of that square' do
-      turn.numberConverter
-      expect(subject.value1).to eq(1)
-      expect(subject.value2).to eq(1)
-    end
-  end
   describe '#changeValue' do
     it 'changes the value of the selected square to the current players marker' do
-      board = Board.new
-      turn.numberConverter
-      turn.changeValue(board)
-      expect(board.board[1][1]).to eq('X')
+      turn.changeValue
+      expect(@board.board[4]).to eq('X')
+    end
+
+    it 'Throws an error if the square already has a marker in' do
+      turn.changeValue
+      expect{ turn.changeValue }.to raise_error('This square is already claimed')
+    end
+  end
+
+  describe '#takeTurn' do
+    it'Plays through a whole game turn' do
+      turn.takeTurn
+      expect(@board.board[4]).to eq('X')
     end
   end
 end
