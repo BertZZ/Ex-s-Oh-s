@@ -12,6 +12,7 @@ class Game # It runs the game
     @other_player = @players[1]
     @board = Board.new
     @printer = BoardPrinter.new
+    @checker = Checker.new
     printBoard
     printCurrentPlayer
   end
@@ -28,15 +29,34 @@ class Game # It runs the game
     @current_player , @other_player = @other_player, @current_player
   end
 
+  def winner?
+   @checker.is_winner?(@board, @current_player.marker)
+  end
+
+  def draw?
+    @checker.is_draw?(@board)
+  end
+
+  def gameOver
+    @printer.printWinner(@current_player)
+  end
+
   def claimSquare(number)
     if number > 9
       raise 'Please enter a valid square number'
     else
       turn = Turn.new(number, @current_player, @board)
       turn.takeTurn
-      endTurn
-      printBoard
-      printCurrentPlayer
+      if draw?
+        # drawMessage
+      elsif winner?
+        gameOver
+        printBoard
+      else
+        endTurn
+        printBoard
+        printCurrentPlayer
+      end
     end
   end
 end

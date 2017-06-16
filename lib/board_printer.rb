@@ -19,4 +19,8 @@ class BoardPrinter
   def printPlayer(player)
     puts "It is #{player.name}'s Turn. Claim a square by typing game.claimSquare(number)"
   end
+
+  def printWinner(player)
+    puts "Congratulations #{player.name} you won"
+  end
 end

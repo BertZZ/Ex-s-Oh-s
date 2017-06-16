@@ -37,8 +37,17 @@ describe Game do
       game.claimSquare(6)
       expect(game.board.board[5]).not_to eq(' ')
     end
-    it 'Throws an error if a number higher than 9 is entered' do
+
+    it 'Throws an error if a number higher than 9 is entered' do #The Tim clause
       expect{ game.claimSquare(34) }.to raise_error('Please enter a valid square number')
+    end
+  end
+  describe '#winner' do
+    it 'Checks if there is a winner' do
+      game.board.board[0] = game.current_player.marker
+      game.board.board[3] = game.current_player.marker
+      game.board.board[6] = game.current_player.marker
+      expect(game.winner?).to be_truthy
     end
   end
 end
