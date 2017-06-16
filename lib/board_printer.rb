@@ -25,6 +25,6 @@ class BoardPrinter
   end
 
   def printDraw
-    puts "The game was a Draw. Better luck next time"
+    puts 'The game was a Draw. Better luck next time'
   end
 end

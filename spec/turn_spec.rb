@@ -24,7 +24,7 @@ describe Turn do
 
     it 'Throws an error if the square already has a marker in' do
       turn.changeValue
-      expect{ turn.changeValue }.to raise_error('This square is already claimed')
+      expect { turn.changeValue }.to raise_error('This square is already claimed')
     end
   end
 

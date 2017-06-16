@@ -26,11 +26,11 @@ class Game # It runs the game
   end
 
   def endTurn
-    @current_player , @other_player = @other_player, @current_player
+    @current_player, @other_player = @other_player, @current_player
   end
 
   def winner?
-   @checker.is_winner?(@board, @current_player.marker)
+    @checker.is_winner?(@board, @current_player.marker)
   end
 
   def draw?

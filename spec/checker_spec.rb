@@ -96,7 +96,7 @@ describe Checker do
   end
 
   describe '#is_draw?' do
-    it "Returns true if there is a draw" do
+    it 'Returns true if there is a draw' do
       board = Board.new
       board.board[0] = 'X'
       board.board[1] = 'O'

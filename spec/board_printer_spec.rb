@@ -14,14 +14,14 @@ describe BoardPrinter do
 
   describe '#printPlayer' do
     it 'Prints the name of the player whose turn it is' do
-      player = Player.new("Bertie", "X")
+      player = Player.new('Bertie', 'X')
       expect { subject.printPlayer(player) }.to output("It is Bertie's Turn. Claim a square by typing game.claimSquare(number)\n").to_stdout
     end
   end
 
   describe '#printWinner' do
     it 'Prints a message of congratulations to the winner of the game' do
-      player = Player.new("Bertie", "X")
+      player = Player.new('Bertie', 'X')
       expect { subject.printWinner(player) }.to output("Congratulations Bertie you won\n").to_stdout
     end
   end
