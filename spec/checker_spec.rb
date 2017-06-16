@@ -113,6 +113,7 @@ describe Checker do
       board = Board.new
       board.board[0] = 'X'
       board.board[1] = 'O'
+      expect(subject.is_draw?(board)).to be_falsy
     end
   end
 end

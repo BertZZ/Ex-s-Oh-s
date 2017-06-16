@@ -30,8 +30,10 @@ class Checker
   def is_draw?(board)
     i = 0
     board.board.each do |value|
-      if value = 'X' || 'O'
+      if value == 'X' || value == 'O'
         i = i + 1
+      else
+        i = i -1
       end
     end
     if i == 9

@@ -19,10 +19,16 @@ describe BoardPrinter do
     end
   end
 
-  describe'#print_winner' do
+  describe '#printWinner' do
     it 'Prints a message of congratulations to the winner of the game' do
       player = Player.new("Bertie", "X")
       expect { subject.printWinner(player) }.to output("Congratulations Bertie you won\n").to_stdout
+    end
+  end
+
+  describe '#printDraw' do
+    it 'Prints the draw message' do
+      expect { subject.printDraw }.to output("The game was a Draw. Better luck next time\n").to_stdout
     end
   end
 end

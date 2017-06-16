@@ -23,4 +23,8 @@ class BoardPrinter
   def printWinner(player)
     puts "Congratulations #{player.name} you won"
   end
+
+  def printDraw
+    puts "The game was a Draw. Better luck next time"
+  end
 end

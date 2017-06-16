@@ -37,6 +37,10 @@ class Game # It runs the game
     @checker.is_draw?(@board)
   end
 
+  def drawMessage
+    @printer.printDraw
+  end
+
   def gameOver
     @printer.printWinner(@current_player)
   end
@@ -48,10 +52,11 @@ class Game # It runs the game
       turn = Turn.new(number, @current_player, @board)
       turn.takeTurn
       if draw?
-        # drawMessage
-      elsif winner?
-        gameOver
         printBoard
+        drawMessage
+      elsif winner?
+        printBoard
+        gameOver
       else
         endTurn
         printBoard
