@@ -1,3 +1,7 @@
+require_relative 'player'
+require_relative 'board'
+require_relative 'board_printer'
+require_relative 'checker'
 require_relative 'turn'
 
 class Game # It runs the game

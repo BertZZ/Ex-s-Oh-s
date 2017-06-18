@@ -1,17 +1,16 @@
 # Ex-s-Oh-s
 
+Quick start guide.
 
-require '/Users/bertz/Projects/Xs_and_Os/lib/player.rb'
-require '/Users/bertz/Projects/Xs_and_Os/lib/board_printer.rb'
-require '/Users/bertz/Projects/Xs_and_Os/lib/board.rb'
-require '/Users/bertz/Projects/Xs_and_Os/lib/square.rb'
-require '/Users/bertz/Projects/Xs_and_Os/lib/game.rb'
-require '/Users/bertz/Projects/Xs_and_Os/lib/checker.rb'
-game = Game.new("Bertie", "B", "Jaiye", "J") -->
+Enter the following file in pry or erb:
 
-X O O
-O X X
-X X O
+```
+require '/lib/game.rb'
+```
+and then start a new game, passing in the following information as so:
 
-X O X
-O O X
+```
+game = Game.new("Player 1 Name", "Player 1 Symbol", "Player 2 Name", "Player 2 Symbol")
+```
+
+Then to play simply follow the instructions on the screen

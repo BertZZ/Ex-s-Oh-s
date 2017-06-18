@@ -1,3 +1,5 @@
+require_relative 'square'
+
 class Board # It creates the Game Board
   attr_accessor :board
 
