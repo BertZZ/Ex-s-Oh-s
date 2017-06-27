@@ -2,6 +2,10 @@
 
 Quick start guide.
 
+```
+bundle exec rspec
+```
+
 Enter the following file in pry or erb:
 
 ```
